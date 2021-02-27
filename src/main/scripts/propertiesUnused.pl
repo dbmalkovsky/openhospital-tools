@@ -180,7 +180,7 @@ sub doReadDirGetFilesByExtension {
 
      my @arr_files = ();
      # File::find accepts ONLY single function call, without params, hence:
-     find(wrapp_wanted_call(\&filter_file_with_ext, $ext, \@arr_files), $dir);
+     find(wrapper_wanted_call(\&filter_file_with_ext, $ext, \@arr_files), $dir);
 
      return \@arr_files;
 }
@@ -202,7 +202,7 @@ sub filter_file_with_ext {
 # -----------------------------------------------------------------------------
 # The wrapper around the wanted function
 # -----------------------------------------------------------------------------
-sub wrapp_wanted_call {
+sub wrapper_wanted_call {
     my ($function, $param1, $param2) = @_;
 
     sub {
