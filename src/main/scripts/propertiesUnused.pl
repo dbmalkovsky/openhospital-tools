@@ -47,8 +47,8 @@ foreach $file (@$arrRefTxtFiles) {
 	    || die "open of $file failed";
         foreach $line (<INFILE>) {
 	    # new UserMenuItem("main", "angal.menu.menuitemmainmenu", "angal.menu.menuitemmainmenu", "",
-	    while ($line =~ /.*{"(angal[a-zA-Z0-9\.]*)",*/o) {
-		####print "..... $1\n";
+	    while ($line =~ /.*"(angal[a-zA-Z0-9\.]*)",*/o) {
+		#print "..... $1\n";
 		$end = $+[1];
 		$line = substr($line, $end + 1);
 		$keys{$1} = 1;
