@@ -60,28 +60,31 @@ foreach $file (@$arrRefTxtFiles) {
 
 ########################################################################
 # Go through each GUI jrxml file looking for resource strings
+#
+# NOTE: Found out that jrxml files have their own <filename_jrxml>*.properties in the same folder
+#
 ########################################################################
-$dir = "/home/dbm/dev/openhospital-gui/rpt";
-
-$arrRefTxtFiles = doReadDirGetFilesByExtension($dir, 'jrxml');
-
-foreach $file (@$arrRefTxtFiles) {
-    open(INFILE, "< $file")
-        || die "open of $file failed";
-    foreach $line (<INFILE>) {
-	# class="java.lang.String"><![CDATA[$P{REPORT_RESOURCE_BUNDLE}.getString( "angal.report.patientbillextendedtxt.patn" ) + $F{BLL_ID_PAT}
-	# class="java.lang.String"><![CDATA[$P{REPORT_RESOURCE_BUNDLE}.getString( "angal.report.billsreportuserallindate.total" )]]
-	# class="java.lang.String"><![CDATA[$P{REPORT_RESOURCE_BUNDLE}.getString( "angal.report.patientbillextendedtxt.patn" )
-	while ($line =~ /{REPORT_RESOURCE_BUNDLE}.getString\(\s*"([a-zA-Z0-9\.]*)"\s*\)/o) {
-	    $end = $+[1];
-	    ###0print "Found $file $1\n";
-    	    $line = substr($line, $end + 1);
-	    $keys{$1} = 1;
-	    ###print "Line: $line\n";
-	}
-    }
-    close(INFILE);
-}
+#$dir = "/home/dbm/dev/openhospital-gui/rpt";
+#
+#$arrRefTxtFiles = doReadDirGetFilesByExtension($dir, 'jrxml');
+#
+#foreach $file (@$arrRefTxtFiles) {
+#    open(INFILE, "< $file")
+#        || die "open of $file failed";
+#    foreach $line (<INFILE>) {
+#	# class="java.lang.String"><![CDATA[$P{REPORT_RESOURCE_BUNDLE}.getString( "angal.report.patientbillextendedtxt.patn" ) + $F{BLL_ID_PAT}
+#	# class="java.lang.String"><![CDATA[$P{REPORT_RESOURCE_BUNDLE}.getString( "angal.report.billsreportuserallindate.total" )]]
+#	# class="java.lang.String"><![CDATA[$P{REPORT_RESOURCE_BUNDLE}.getString( "angal.report.patientbillextendedtxt.patn" )
+#	while ($line =~ /{REPORT_RESOURCE_BUNDLE}.getString\(\s*"([a-zA-Z0-9\.]*)"\s*\)/o) {
+#	    $end = $+[1];
+#	    ###0print "Found $file $1\n";
+#   	    $line = substr($line, $end + 1);
+#	    $keys{$1} = 1;
+#	    ###print "Line: $line\n";
+#	}
+#    }
+#    close(INFILE);
+#}
 
 ########################################################################
 # Go through each CORE java file looking for resource strings
