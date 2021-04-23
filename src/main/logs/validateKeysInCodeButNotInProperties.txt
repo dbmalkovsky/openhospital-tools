@@ -1,121 +1,73 @@
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.admission.deletem\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.admission.youaresigningnewdatawithyournameconfirm\>" *.* 
+openhospital-gui\src\main\java\org\isf\admission\gui\AdmissionBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.admission.editm\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.common.codemaxchars\>" *.* 
+openhospital-gui\src\main\java\org\isf\disctype\gui\DischargeTypeBrowserEdit.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.admission.youaresigningnewdatawithyournameconfirm\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\admission\gui\AdmissionBrowser.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.common.codetoolongmaxchars\>" *.* 
+openhospital-gui\src\main\java\org\isf\operation\gui\OperationEdit.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.common.codemaxchars\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\disctype\gui\DischargeTypeBrowserEdit.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.dicom.manager.nodir\>" *.* 
+openhospital-core\src\main\java\org\isf\dicom\manager\FileSystemDicomManager.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.common.codetoolongmaxchars\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\operation\gui\OperationEdit.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.dicom.manager.noimpl\>" *.* 
+openhospital-core\src\main\java\org\isf\dicom\manager\DicomManagerFactory.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.dicom.manager.nodir\>" *.*
-openhospital-core-develop\src\main\java\org\isf\dicom\manager\FileSystemDicomManager.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.dlvrrestype.codetoolongmaxchar\>" *.* 
+openhospital-core\src\main\java\org\isf\dlvrrestype\manager\DeliveryResultTypeBrowserManager.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.dicom.manager.noimpl\>" *.*
-openhospital-core-develop\src\main\java\org\isf\dicom\manager\DicomManagerFactory.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.exatype.codetoolongmaxchar\>" *.* 
+openhospital-core\src\main\java\org\isf\exatype\manager\ExamTypeBrowserManager.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.dlvrrestype.codetoolongmaxchar\>" *.*
-openhospital-core-develop\src\main\java\org\isf\dlvrrestype\manager\DeliveryResultTypeBrowserManager.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.malnutrition.controldatemustbeaftervisitdate\>" *.* 
+openhospital-core\src\main\java\org\isf\malnutrition\manager\MalnutritionManager.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.exatype.codetoolongmaxchar\>" *.*
-openhospital-core-develop\src\main\java\org\isf\exatype\manager\ExamTypeBrowserManager.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.medicalstock.problemsoccurredwithsqlistruction\>" *.* 
+openhospital-gui\src\main\java\org\isf\medicalstock\gui\MovStockBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.lab.delete\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.medicalstockward.insertvalidweight\>" *.* 
+openhospital-gui\src\main\java\org\isf\medicalstockward\gui\WardPharmacy.java
+openhospital-gui\src\main\java\org\isf\medicalstockward\gui\WardPharmacyEdit.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.lab.edit\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.medstockmovtype.codetoolongmaxchar\>" *.* 
+openhospital-core\src\main\java\org\isf\medstockmovtype\manager\MedicaldsrstockmovTypeBrowserManager.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.lab.new\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.opd.disease1mayhavebeencanceled\>" *.* 
+openhospital-gui\src\main\java\org\isf\opd\gui\OpdEditExtended.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.malnutrition.controldatemustbeaftervisitdate\>" *.*
-openhospital-core-develop\src\main\java\org\isf\malnutrition\manager\MalnutritionManager.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.opd.disease2mayhavebeencanceled\>" *.* 
+openhospital-gui\src\main\java\org\isf\opd\gui\OpdEditExtended.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.medicals.delete\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.opd.disease3mayhavebeencanceled\>" *.* 
+openhospital-gui\src\main\java\org\isf\opd\gui\OpdEditExtended.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.medicals.edit\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.patient.addressm\>" *.* 
+openhospital-gui\src\main\java\org\isf\patient\gui\PatientBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.medicals.new\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.patient.agem\>" *.* 
+openhospital-gui\src\main\java\org\isf\patient\gui\PatientBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.medicalstock.problemsoccurredwithsqlistruction\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\medicalstock\gui\MovStockBrowser.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.patient.citym\>" *.* 
+openhospital-gui\src\main\java\org\isf\patient\gui\PatientBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.medicalstockward.insertvalidweight\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\medicalstockward\gui\WardPharmacy.java
-openhospital-gui-develop\src\main\java\org\isf\medicalstockward\gui\WardPharmacyEdit.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.patient.namem\>" *.* 
+openhospital-gui\src\main\java\org\isf\patient\gui\PatientBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.medstockmovtype.codetoolongmaxchar\>" *.*
-openhospital-core-develop\src\main\java\org\isf\medstockmovtype\manager\MedicaldsrstockmovTypeBrowserManager.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.patient.sexm\>" *.* 
+openhospital-gui\src\main\java\org\isf\patient\gui\PatientBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.menu.btn.laboratoryresulttype\>" *.*
-openhospital-core-develop\mysql\db\step_05_update_menu_i18n.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.patient.telephonem\>" *.* 
+openhospital-gui\src\main\java\org\isf\patient\gui\PatientBrowser.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.menu.laboratoryresulttype\>" *.*
-openhospital-core-develop\mysql\db\step_05_update_menu_i18n.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.preagtreattype.codemaxlength\>" *.* 
+openhospital-gui\src\main\java\org\isf\pregtreattype\gui\PregnantTreatmentTypeEdit.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.opd.delete\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
+e:\CODE>findstr /s /r /i /m /c:"\<angal.preagtreattype.codetoolong\>" *.* 
+openhospital-core\src\main\java\org\isf\pregtreattype\manager\PregnantTreatmentTypeBrowserManager.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.opd.disease1mayhavebeencanceled\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\opd\gui\OpdEditExtended.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.preagtreattype.description2\>" *.* 
+openhospital-gui\src\main\java\org\isf\pregtreattype\gui\PregnantTreatmentTypeEdit.java
 
-C:\CODE>findstr /s /r /i /m /c:"\<angal.opd.disease2mayhavebeencanceled\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\opd\gui\OpdEditExtended.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.opd.disease3mayhavebeencanceled\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\opd\gui\OpdEditExtended.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.opd.edit\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.opd.new\>" *.*
-openhospital-core-develop\mysql\db\step_16_Accessi20.sql
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patient.addressm\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\patient\gui\PatientBrowser.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patient.agem\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\patient\gui\PatientBrowser.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patient.citym\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\patient\gui\PatientBrowser.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patient.namem\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\patient\gui\PatientBrowser.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patient.sexm\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\patient\gui\PatientBrowser.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patient.telephonem\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\patient\gui\PatientBrowser.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patvac.delete\>" *.*
-openhospital-core-develop\mysql\db\step_24_patient_vaccine.sql
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patvac.edit\>" *.*
-openhospital-core-develop\mysql\db\step_24_patient_vaccine.sql
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.patvac.new\>" *.*
-openhospital-core-develop\mysql\db\step_24_patient_vaccine.sql
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.preagtreattype.codemaxlength\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\pregtreattype\gui\PregnantTreatmentTypeEdit.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.preagtreattype.codetoolong\>" *.*
-openhospital-core-develop\src\main\java\org\isf\pregtreattype\manager\PregnantTreatmentTypeBrowserManager.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.preagtreattype.description2\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\pregtreattype\gui\PregnantTreatmentTypeEdit.java
-
-C:\CODE>findstr /s /r /i /m /c:"\<angal.priceslist.descriptionstar\>" *.*
-openhospital-gui-develop\src\main\java\org\isf\priceslist\gui\ListEdit.java
+e:\CODE>findstr /s /r /i /m /c:"\<angal.priceslist.descriptionstar\>" *.* 
+openhospital-gui\src\main\java\org\isf\priceslist\gui\ListEdit.java
