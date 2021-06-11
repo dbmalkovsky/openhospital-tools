@@ -16,45 +16,71 @@ foreach $file (@$arrRefTxtFiles) {
     open(INFILE, "< $file")
         || die "open of $file failed";
     foreach $line (<INFILE>) {
-	while ($line =~ /MessageBundle\.getMessage\("([a-zA-Z0-9\.]*)"\)/o) {
-	    $end = $+[1];
-	    ###print "Found $file $1\n";
-    	    $line = substr($line, $end + 1);
-	    $keys{$1} = 1;
-	    ###print "Line: $line\n";
-	}
+        while ($line =~ /MessageBundle\.(get|format)Message\("([a-zA-Z0-9\.]*)"\)/o) {
+            $end = $+[1];
+            ####print "Found $file $1\n";
+            $line = substr($line, $end + 1);
+            $keys{$2} = 1;
+             ####print "Line: $line\n";
+        }
+    }
+    close(INFILE);
+
+    open(INFILE, "< $file")
+        || die "open of $file failed";
+    foreach $line (<INFILE>) {
+        while ($line =~ /MessageBundle\.getMnemonic\("([a-zA-Z0-9\.]*)"\)/o) {
+            $end = $+[1];
+            ####print "Found $file $1\n";
+            $line = substr($line, $end + 1);
+            $keys{$1} = 1;
+            ####print "Line: $line\n";
+        }
+    }
+    close(INFILE);
+
+    open(INFILE, "< $file")
+        || die "open of $file failed";
+    foreach $line (<INFILE>) {
+        while ($line =~ /"(angal[a-zA-Z0-9\.]*)"/o) {
+            $end = $+[1];
+            ####print "Found $file $1\n";
+            $line = substr($line, $end + 1);
+            $keys{$1} = 1;
+            ####print "Line: $line\n";
+        }
     }
     close(INFILE);
 
     #### Special case
     if ($file =~ /ReportLauncher.java$/) {
-	open(INFILE, "< $file")
-	    || die "open of $file failed";
+        open(INFILE, "< $file")
+            || die "open of $file failed";
         foreach $line (<INFILE>) {
-	    #   {"angal.stat.registeredpatient", 	"OH001_RegisteredPatients", 	"twodates"},
-	    while ($line =~ /.*{"(angal[a-zA-Z0-9\.]*)",.*/o) {
-		####print "..... $1\n";
-		$end = $+[1];
-		$line = substr($line, $end + 1);
-		$keys{$1} = 1;
-	    }
-	}
-	close(INFILE);
+            #   {"angal.stat.registeredpatient", 	"OH001_RegisteredPatients", 	"twodates"},
+            while ($line =~ /.*{"(angal[a-zA-Z0-9\.]*)",.*/o) {
+                ####print "..... $1\n";
+                $end = $+[1];
+                $line = substr($line, $end + 1);
+                $keys{$2} = 1;
+            }
+        }
+        close(INFILE);
     }
     #### Special case
     if ($file =~ /PrivilegeTree.java$/) {
-	open(INFILE, "< $file")
-	    || die "open of $file failed";
+        open(INFILE, "< $file")
+            || die "open of $file failed";
         foreach $line (<INFILE>) {
-	    # new UserMenuItem("main", "angal.menu.menuitemmainmenu", "angal.menu.menuitemmainmenu", "",
-	    while ($line =~ /.*"(angal[a-zA-Z0-9\.]*)",*/o) {
-		#print "..... $1\n";
-		$end = $+[1];
-		$line = substr($line, $end + 1);
-		$keys{$1} = 1;
-	    }
-	}
-	close(INFILE);
+            # new UserMenuItem("main", "angal.menu.menuitemmainmenu", "angal.menu.menuitemmainmenu", "",
+            while ($line =~ /.*"(angal[a-zA-Z0-9\.]*)",*/o) {
+                #print "..... $1\n";
+                $end = $+[1];
+                $line = substr($line, $end + 1);
+                $keys{$1} = 1;
+            }
+        }
+        close(INFILE);
     }
 }
 
@@ -96,14 +122,27 @@ $arrRefTxtFiles = doReadDirGetFilesByExtension($dir, 'java');
 foreach $file (@$arrRefTxtFiles) {
     open(INFILE, "< $file")
         || die "open of $file failed";
-        foreach $line (<INFILE>) {
-	while ($line =~ /MessageBundle\.getMessage\("([a-zA-Z0-9\.]*)"\)/o) {
-	    $end = $+[1];
-	    ###print "Found $file $1\n";
-    	    $line = substr($line, $end + 1);
-	    $keys{$1} = 1;
-	    ###print "Line: $line\n";
-	}
+    foreach $line (<INFILE>) {
+        while ($line =~ /MessageBundle\.(get|format)Message\("([a-zA-Z0-9\.]*)"\)/o) {
+            $end = $+[1];
+            ###print "Found $file $1\n";
+            $line = substr($line, $end + 1);
+            $keys{$2} = 1;
+            ###print "Line: $line\n";
+        }
+    }
+    close(INFILE);
+
+    open(INFILE, "< $file")
+        || die "open of $file failed";
+    foreach $line (<INFILE>) {
+        while ($line =~ /"(angal[a-zA-Z0-9\.]*)"/o) {
+            $end = $+[1];
+            ####print "Found $file $1\n";
+            $line = substr($line, $end + 1);
+            $keys{$1} = 1;
+            ####print "Line: $line\n";
+        }
     }
     close(INFILE);
 }
@@ -119,15 +158,15 @@ foreach $file (@$arrRefTxtFiles) {
     open(INFILE, "< $file")
         || die "open of $file failed";
     foreach $line (<INFILE>) {
-	# MNI_BTN_LABEL='angal.menu.btn.help', MNI_LABEL='angal.menu.help' WHERE MNI_ID_A='help';
-	# INSERT INTO `agetype` VALUES ('d0',0,0,'angal.agetype.newborn',NULL,NULL,NULL,NULL,1);
-	while ($line =~ /'(angal\.[a-zA-Z0-9\.]*)'/o) {
-	    $end = $+[1];
-	    ####print "Found $file $1\n";
-    	    $line = substr($line, $end + 1);
-	    $keys{$1} = 1;
-	    ###print "Line: $line\n";
-	}
+        # MNI_BTN_LABEL='angal.menu.btn.help', MNI_LABEL='angal.menu.help' WHERE MNI_ID_A='help';
+        # INSERT INTO `agetype` VALUES ('d0',0,0,'angal.agetype.newborn',NULL,NULL,NULL,NULL,1);
+        while ($line =~ /'(angal\.[a-zA-Z0-9\.]*)'/o) {
+            $end = $+[1];
+            ####print "Found $file $1\n";
+            $line = substr($line, $end + 1);
+            $keys{$1} = 1;
+            ###print "Line: $line\n";
+        }
     }
     close(INFILE);
 }
@@ -146,17 +185,20 @@ print "===============\n\n";
 foreach $file (@PROPS) {
     open(PROP, "< $file")
         || die "cannot open $file";
-    while(<PROP>) {
+    while (<PROP>) {
+        if (/^# Key\/values used in sql files/) {
+            last;
+        }
         next if /^#/o;
         chop;
-        if (/^(.+)\s+=.*/) {
+        if (/^(.+?)\s+=.*/) {
             $s = $1;
-	    $s =~ s/\s+$//;   # trim trailing spaces
-	    ### print ">>$s<<\n";
+            $s =~ s/\s+$//; # trim trailing spaces
+	        ### print ">>$s<<\n";
             if ($keys{$s} ne 1) {
-               print "$s\n";
+                print "$s\n";
             }
-	    $keys{$s} = 99;
+            $keys{$s} = 99;
         }
     }
     close(PROP);
