@@ -1,0 +1,28 @@
+Keys not Used
+===============
+
+
+
+Strings not found in language_en.properties
+===========================================
+
+no longer used? ==> angal.menu.btn.laboratoryresulttype
+common => angal.lab.delete
+common => angal.admission.editm
+removed from menu => angal.menu.exit
+common => angal.patvac.new
+common => angal.patvac.edit
+common => angal.patvac.delete
+common => angal.opd.delete
+common => angal.medicals.edit
+removed from menu => angal.menu.file
+common => angal.lab.edit
+common => angal.admission.deletem
+common => angal.opd.new
+removed from menu => angal.menu.btn.exit
+removed from menu => angal.menu.btn.file
+common => angal.medicals.delete
+common => angal.opd.edit
+common => angal.medicals.new
+no longer used? ==> angal.menu.laboratoryresulttype
+common => angal.lab.new
