@@ -150,7 +150,7 @@ foreach $file (@$arrRefTxtFiles) {
 ########################################################################
 # Go through each CORE sql file looking for resource strings
 ########################################################################
-$dir = "/home/dbm/dev/openhospital-core/mysql/db";
+$dir = "/home/dbm/dev/openhospital-core/sql";
 
 $arrRefTxtFiles = doReadDirGetFilesByExtension($dir, 'sql');
 
