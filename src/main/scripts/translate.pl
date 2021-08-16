@@ -33,6 +33,14 @@ open(NEWOTHER, "> $newOther")
 open(ENGLISH, "< $english")
     || die "cannot open $english";
 while (<ENGLISH>) {
+    if (/^#/) {     # comment line
+        print NEWOTHER $_;
+        next;
+    }
+    if (/^$/) {     # blank line
+        print NEWOTHER $_;
+        next;
+    }
     chop;
     if (/^(.+?\s+)=.*/) {
         $s = $1;
@@ -51,12 +59,12 @@ while (<ENGLISH>) {
                 print NEWOTHER "$strailing= $keys{$newS}\n";
             }
             else {
-                print NEWOTHER "$_\n";
+                print NEWOTHER "$strailing=\n"; ###### "$_\n";
             }
         }
     }
     else {
-        print NEWOTHER "$_\n";
+        print NEWOTHER "$strailing=\n";  ###### "$_\n";
     }
 }
 close(ENGLISH);
